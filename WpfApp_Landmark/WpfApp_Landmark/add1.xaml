@@ -1,0 +1,98 @@
+﻿<Window x:Class="WpfApp_Landmark.add1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Landmark"
+        mc:Ignorable="d"
+        Title="Добавление новой достопримечательности"
+        Height="450" 
+        Width="400"
+        Background="White"
+        WindowStartupLocation="CenterScreen" 
+        WindowState="Normal" 
+        ResizeMode="NoResize">
+
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="name"
+                 materialDesign:HintAssist.Hint="Введите название достопримечательности"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                 Grid.Row="0"
+                 Grid.ColumnSpan="3"
+                 Height="40"
+                 Width="270"
+                 FontFamily="Roboto slab light" 
+                 FontSize="15" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Bottom"
+                 VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center"/>
+        <TextBox materialDesign:HintAssist.Hint="Введите описание достопримечательности"
+                 x:Name="s_description"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                 Grid.Row="1"
+                 Grid.ColumnSpan="3"
+                 Height="40"
+                 Width="330"
+                 FontFamily="Roboto slab light" 
+                 FontSize="15" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Bottom"
+                 VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center"/>
+        <TextBox materialDesign:HintAssist.Hint="Введите код категории"
+                 x:Name="c_id"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                 Grid.Row="2"
+                 Grid.ColumnSpan="3"
+                 Height="40"
+                 Width="260"
+                 FontFamily="Roboto slab light" 
+                 FontSize="15" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Bottom"
+                 VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center"/>
+        <Button Grid.Row="8"
+                Grid.Column="0"
+                FontFamily="Roboto slab light"
+                Content="Добавить"
+                BorderBrush="Green"
+                Foreground="White" 
+                Background="Green"
+                FontSize="14" 
+                Width="150"
+                Height="40"
+                BorderThickness="3"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center" 
+                HorizontalContentAlignment="Center"
+                Click="Button_Add"/>
+        <Button Grid.Row="8"
+                Grid.Column="2"
+                Content="Назад"
+                FontFamily="Roboto slab light" 
+                FontSize="14"
+                Width="150"
+                Height="40"
+                BorderThickness="3"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center" 
+                HorizontalContentAlignment="Center"
+                Click="Button_Close"/>
+    </Grid>
+</Window>
